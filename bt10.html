@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lưu Trung Nghĩa</title>
+</head>
+<body>
+    <input type="text" name="txtCharNum">
+    <textarea name="txtContent" cols="50" rows="10" onkeyup="KiemTra();"></textarea>
+
+
+    <script language="JavaScript">
+        function KiemTra() {
+            var txtContent = document.getElementsByName("txtContent")[0];
+            var txtCharNum = document.getElementsByName("txtCharNum")[0];
+            if (txtContent.value.length > 200) {
+                alert("Bạn đã gõ quá số kí tự cho phép!");
+            }
+            txtCharNum.value = txtContent.value.length;
+        }
+    </script>
+    
+</body>
+</html>
