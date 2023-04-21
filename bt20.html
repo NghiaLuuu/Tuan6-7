@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bán hoa</title>
+	<script>
+		function calculateTotal() {
+			// Lấy giá trị số lượng của các bó hoa
+			var roseQty = document.getElementById("rose-qty").value;
+			var sunflowerQty = document.getElementById("sunflower-qty").value;
+			var lilyQty = document.getElementById("lily-qty").value;
+
+			// Lấy giá trị giá của từng bó hoa
+			var rosePrice = parseFloat(document.getElementById("rose-price").innerHTML);
+			var sunflowerPrice = parseFloat(document.getElementById("sunflower-price").innerHTML);
+			var lilyPrice = parseFloat(document.getElementById("lily-price").innerHTML);
+
+			// Tính tổng giá tiền
+			var total = roseQty * rosePrice + sunflowerQty * sunflowerPrice + lilyQty * lilyPrice;
+
+			// Cập nhật nội dung trên trang web
+			document.getElementById("total-price").innerHTML = total.toFixed(2);
+		}
+	</script>
+</head>
+<body>
+	<h1>Bán hoa</h1>
+
+	<table>
+		<tr>
+			<th>Loại hoa</th>
+			<th>Số lượng</th>
+			<th>Giá tiền (VNĐ/bó)</th>
+		</tr>
+		<tr>
+			<td>Hoa hồng</td>
+			<td><input type="number" id="rose-qty" min="0" value="0" onchange="calculateTotal()"></td>
+			<td id="rose-price">100000</td>
+		</tr>
+		<tr>
+			<td>Hoa hướng dương</td>
+			<td><input type="number" id="sunflower-qty" min="0" value="0" onchange="calculateTotal()"></td>
+			<td id="sunflower-price">80000</td>
+		</tr>
+		<tr>
+			<td>Hoa ly</td>
+			<td><input type="number" id="lily-qty" min="0" value="0" onchange="calculateTotal()"></td>
+			<td id="lily-price">120000</td>
+		</tr>
+	</table>
+
+	<p>Tổng tiền: <span id="total-price">0</span> VNĐ</p>
+
+</body>
+</html>

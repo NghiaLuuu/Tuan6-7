@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input">Nhập thông tin:</label>
+<input type="text" id="input">
+<button onclick="displayValue()">Hiển thị giá trị</button>
+<p>Giá trị của ô input là: <span id="result"></span></p>
+<script>
+    function displayValue() {
+  // Truy cập đến phần tử input và lấy giá trị hiện tại của nó
+  var inputValue = document.getElementById("input").value;
+  
+  // Truy cập đến phần tử span để hiển thị giá trị của input
+  var resultElement = document.getElementById("result");
+  
+  // Thiết lập giá trị của span là giá trị hiện tại của input
+  resultElement.textContent = inputValue;
+}
+</script>
+</body>
+</html>

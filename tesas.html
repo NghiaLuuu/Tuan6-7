@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhap van ban:</p>
+    <input type="text" id="nhapvanban">
+    <button onclick="abc()">Hienthivanban</button>
+    <p>Hien thi van ban: <span id="hienthivanban"></span></p>
+    <script>
+        function abc() {
+            var abc1 = document.getElementById("nhapvanban").value;
+            var abc2 = document.getElementById("hienthivanban");
+            abc2.textContent = abc1;
+        }
+    </script>
+</body>
+</html>
